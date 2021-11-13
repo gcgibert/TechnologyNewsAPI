@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Api Tecnology News</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+  </head>
+  <body>  
+
+    <nav class="navbar navbar-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./index.html">API Tech News</a>
+
+        <form name="formRadio" class="container-fluid justify-content-start">
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" checked value="4gnews" onclick="getArticles()">
+            <label class="btn btn-outline-primary me-2" for="btnradio1">4gnews</label>
+
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" value="noticiasaominuto" onclick="getArticles()">
+            <label class="btn btn-outline-primary me-2" for="btnradio2">Notícias ao Minuto</label>
+
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio3" value="sapo" onclick="getArticles()">
+            <label class="btn btn-outline-primary me-2" for="btnradio3">Sapo</label>
+
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio4" value="tecmundo" onclick="getArticles()">
+            <label class="btn btn-outline-primary me-2" for="btnradio4">TecMundo</label>
+
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio5" value="tugatech" onclick="getArticles()">
+            <label class="btn btn-outline-primary me-2" for="btnradio5">TugaTech</label>
+      </form>
+      </div>
+    </nav>
+
+    <br>
+
+    <div id="articles" class="row row-cols-1 row-cols-md-3 g-4 container-fluid">
+    </div>
+
+
+    <script src="js/ondemand.js"></script>
+    <script src="js/onload.js"></script>
+  </body>
+</html>
