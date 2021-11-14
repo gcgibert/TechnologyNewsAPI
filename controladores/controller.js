@@ -20,3 +20,6 @@ exports.goTugaTech = (req, res) => {
     model_articles.getTugaTech(req, res)
 }
 
+exports.goAllArticles = (req, res) => {
+    model_articles.getAllArticles(req, res)
+}

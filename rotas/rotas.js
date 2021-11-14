@@ -13,5 +13,7 @@ module.exports = app => {
 
     router.get("/tugatech", controller.goTugaTech);
 
+    router.get("/", controller.goAllArticles);
+
     app.use('/api', router);
 }
