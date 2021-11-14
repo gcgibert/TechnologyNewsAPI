@@ -7,26 +7,30 @@
   </head>
   <body>  
 
-    <nav class="navbar navbar-light">
+    <nav class="navbar navbar-light" style="background-color: rgb(237, 240, 245)">
       <div class="container-fluid">
         <a class="navbar-brand" href="./index.html">API Tech News</a>
-
-        <form name="formRadio" class="container-fluid justify-content-start">
-            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" checked value="4gnews" onclick="getArticles()">
-            <label class="btn btn-outline-primary me-2" for="btnradio1">4gnews</label>
-
-            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" value="noticiasaominuto" onclick="getArticles()">
-            <label class="btn btn-outline-primary me-2" for="btnradio2">Notícias ao Minuto</label>
-
-            <input type="radio" class="btn-check" name="btnradio" id="btnradio3" value="sapo" onclick="getArticles()">
-            <label class="btn btn-outline-primary me-2" for="btnradio3">Sapo</label>
-
-            <input type="radio" class="btn-check" name="btnradio" id="btnradio4" value="tugatech" onclick="getArticles()">
-            <label class="btn btn-outline-primary me-2" for="btnradio4">TugaTech</label>
-
-            <input type="radio" class="btn-check" name="btnradio" id="btnradio5" value="" onclick="getArticles()">
-            <label class="btn btn-outline-primary me-2" for="btnradio5">All</label>
-      </form>
+          <div class="navbar-nav">
+              <form name="formRadio" class="container-fluid justify-content-start">
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" checked value="4gnews" onclick="getArticles()">
+                <label class ="btn btn-outline-primary me-2" for="btnradio1">4gnews</label>
+    
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio2" value="noticiasaominuto" onclick="getArticles()">
+                <label class="btn btn-outline-primary me-2" for="btnradio2">Notícias ao Minuto</label>
+    
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio3" value="sapo" onclick="getArticles()">
+                <label class="btn btn-outline-primary me-2" for="btnradio3">Sapo</label>
+    
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio4" value="tugatech" onclick="getArticles()">
+                <label class="btn btn-outline-primary me-2" for="btnradio4">TugaTech</label>
+    
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio5" value="" onclick="getArticles()">
+                <label class="btn btn-outline-primary me-2" for="btnradio5">All</label>
+              </form>
+          </div>
+        </div>
+        
+        
       </div>
     </nav>
 
