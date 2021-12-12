@@ -20,4 +20,4 @@ Registo de utilizador:
 Login de utilizador:
  - Clicar no botão "Login"
  - Inserir os dados e clicar no botão submeter
- - Depois pdo login feito o restante conteúdo ficara disponíveis
+ - Depois de ter feito o login o restante conteúdo ficara disponíveis
