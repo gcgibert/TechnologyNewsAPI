@@ -17,7 +17,10 @@ Registo de utilizador:
  - Clicar no botão "Register"
  - Após inserir os dados de registo e pressionar submeter irá ser enviado um link para a consola do Visual Studio Code.
  - Aceda ao link mostrado no Visual Studio Code. 
- - Se tudo correr bem irá aparecer na página um json a dizer que o utilizador está ativo
+ - Colocar o link num browser
+ - Copiar o link que está a seguir à mensagem: "Link to activate:". (Terá este aspeto: http://localhost:8080/api/auth/confirm/eyJhbGciOiJIUzI1NiJ9.eHB0b0BnbWFpbC5jb20.avtEpwOEvAHILL3LkgHUFmtcGZtkF7COstA3tE98coM)
+ - Aceder no browser ao link copiado no passo anterior.
+ - Na Janela do browser deverá aparecer que o utilizador foi registado e pode então proceder ao login na página http://localhost:8080/
 
 Login de utilizador:
  - Clicar no botão "Login"
