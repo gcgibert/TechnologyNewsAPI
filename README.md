@@ -2,8 +2,10 @@
 
 Instruções de utilização: 
 
- - Utilizar o comando npm install
- - Utilizar o comando node server.js para correr o servidor
+ - Baixar o ficheiro .zip
+ - Abrir o ficheiro no Visual Studio Code
+ - Escrever o comando npm install no terminal
+ - Escrever o comando node server.js no terminal
  - Aceder ao website http://localhost:8080/
 
 Restrições:
