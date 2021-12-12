@@ -46,7 +46,7 @@ window.onload = () => {
           </div>
             <div class="card">
                 <div class="card-body" style="text-align: center; font-size:25px; font-family: sans-serif">
-                    Este site tem como objetivo mostrar as noticias sobre tecnologia de diferentes fontes.
+                    Este site tem como objetivo mostrar as notícias sobre tecnologia de diferentes fontes.
                 </div>
                 </div>
             `
