@@ -1,5 +1,7 @@
 # TechnologyNewsAPI 
 
+Este site tem como objetivo mostrar as notícias sobre tecnologia de diferentes fontes.
+
 Instruções de utilização: 
 
  - Baixar o ficheiro .zip
