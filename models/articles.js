@@ -24,9 +24,11 @@ axios.get("https://4gnews.pt/")
                     title = $(this).attr('title');
                 }
                 
-                const url = "https://4gnews.pt" + $(this).attr('href');
-    
+                //url = url + $(this).attr('href');
+                
+                const url = "https://4gnews.pt" + $(this).attr('href'); 
 
+                
                 articles4gnews.push({
                     name: "4gnews",
                     title,
@@ -41,6 +43,7 @@ axios.get("https://4gnews.pt/")
 
             })
         }
+
     })
 }).catch((err) => console.log(err))
 
@@ -61,7 +64,6 @@ axios.get("https://www.sapo.pt/noticias/tecnologia")
                 }
                 
                 const url = $(this).attr('href');
-    
 
                 articlesSapo.push({
                     name: "Sapo",
@@ -98,7 +100,6 @@ axios.get("https://www.noticiasaominuto.com/tech")
                 }
                 
                 const url = $(this).attr('href');
-    
 
                 articlesNoticiaAoMinuto.push({
                     name: "Notícias ao Minuto",
@@ -121,7 +122,7 @@ axios.get("https://tugatech.com.pt/f15-noticias-da-internet-e-mercados")
 .then((response) =>{
     const html = response.data;
     const $ = cheerio.load(html);
-    
+
     $('h2', html).each(function () {
         if($(this).attr('class') == 'topic-title hierarchy'){
             const sc = $(this).children('a').each(function() {
@@ -134,7 +135,6 @@ axios.get("https://tugatech.com.pt/f15-noticias-da-internet-e-mercados")
                 }
                 
                 const url = "https://tugatech.com.pt/" + $(this).attr('href');
-    
 
                 articlesTugaTech.push({
                     name: "TugaTech",

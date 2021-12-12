@@ -3,43 +3,291 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>API Technology News</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
   </head>
-  <body>  
+  <body>
 
-    <nav class="navbar navbar-light" style="background-color: rgb(237, 240, 245)">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="./index.html">API Technology News</a>
-          <div class="navbar-nav">
-              <form name="formRadio" class="container-fluid justify-content-start">
-                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" checked value="4gnews" onclick="getArticles()">
-                <label class ="btn btn-outline-primary me-2" for="btnradio1">4gnews</label>
-    
-                <input type="radio" class="btn-check" name="btnradio" id="btnradio2" value="noticiasaominuto" onclick="getArticles()">
-                <label class="btn btn-outline-primary me-2" for="btnradio2">Notícias ao Minuto</label>
-    
-                <input type="radio" class="btn-check" name="btnradio" id="btnradio3" value="sapo" onclick="getArticles()">
-                <label class="btn btn-outline-primary me-2" for="btnradio3">Sapo</label>
-    
-                <input type="radio" class="btn-check" name="btnradio" id="btnradio4" value="tugatech" onclick="getArticles()">
-                <label class="btn btn-outline-primary me-2" for="btnradio4">TugaTech</label>
-    
-                <input type="radio" class="btn-check" name="btnradio" id="btnradio5" value="" onclick="getArticles()">
-                <label class="btn btn-outline-primary me-2" for="btnradio5">All</label>
-              </form>
+    <div id="page-container">
+      <div id="content-wrap">
+        <nav
+          class="navbar navbar-expand-sm navbar-light"
+          style="background-color: rgb(237, 240, 245)"
+        >
+          <div class="container-fluid">
+            <div
+              class="collapse navbar-collapse justify-content-start"
+              id="navbarSupportedContent"
+            >
+              <ul class="navbar-nav">
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="btnradio"
+                  id="btnradio6"
+                  checked
+                  value="home"
+                  onclick="getArticles()"
+                />
+                <label class="btn btn-outline-primary me-2" for="btnradio6"
+                  >Home</label
+                >
+
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="btnradio"
+                  id="btnradio1"
+                  value="4gnews"
+                  onclick="getArticles()"
+                />
+                <label class="btn btn-outline-primary me-2" for="btnradio1"
+                  >4gnews</label
+                >
+
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="btnradio"
+                  id="btnradio2"
+                  value="noticiasaominuto"
+                  onclick="getArticles()"
+                />
+                <label class="btn btn-outline-primary me-2" for="btnradio2"
+                  >Notícias ao Minuto</label
+                >
+
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="btnradio"
+                  id="btnradio3"
+                  value="sapo"
+                  onclick="getArticles()"
+                />
+                <label class="btn btn-outline-primary me-2" for="btnradio3"
+                  >Sapo</label
+                >
+
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="btnradio"
+                  id="btnradio4"
+                  value="tugatech"
+                  onclick="getArticles()"
+                />
+                <label class="btn btn-outline-primary me-2" for="btnradio4"
+                  >TugaTech</label
+                >
+
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="btnradio"
+                  id="btnradio5"
+                  value=""
+                  onclick="getArticles()"
+                />
+                <label class="btn btn-outline-primary me-2" for="btnradio5"
+                  >All</label
+                >
+              </ul>
+            </div>
+            <div
+              class="collapse navbar-collapse justify-content-end"
+              id="navbarSupportedContent"
+            >
+              <ul class="navbar-nav">
+                <button
+                  type="button"
+                  class="btn btn-primary me-2"
+                  id="btnModalLogin"
+                >
+                  Login
+                </button>
+
+                <button
+                  type="button"
+                  class="btn btn-primary me-2"
+                  id="btnModalRegistar"
+                >
+                  Register
+                </button>
+
+                <button
+                  type="button"
+                  class="btn btn-primary me-2"
+                  id="btnLogoff"
+                  hidden="true"
+                >
+                  Logoff
+                </button>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <br />
+
+        <div
+          class="modal fade"
+          id="modalRegistar"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+          data-bs-backdrop="static"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">
+                  Registo de novo utilizador
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <div class="mb-3">
+                  <label class="form-label">E-Mail</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="usernameRegistar"
+                    name="usernameRegistar"
+                    placeholder="E-Mail"
+                  />
+                  <p id="emailErroLoginRegistar"></p>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Senha</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="senhaRegistar"
+                    name="senhaRegistar"
+                    placeholder="Senha"
+                  />
+                  <p id="statusRegistar"></p>
+                </div>
+                <div class="modal-footer d-block">
+                  <button
+                    class="btn btn-warning float-end"
+                    data-bs-dismiss="modal"
+                  >
+                    Cancelar
+                  </button>
+                  <button
+                    class="btn btn-success float-end"
+                    id="btnSubmitRegistar"
+                    onclick="validaRegisto()"
+                  >
+                    Submeter
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        
-        
+
+        <div
+          class="modal fade"
+          id="modalLogin"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+          data-bs-backdrop="static"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">
+                  Insira suas credenciais
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                  id="btnLoginClose"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <div class="mb-3">
+                  <label class="form-label">E-Mail</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="usernameLogin"
+                    name="usernameLogin"
+                    placeholder="E-Mail"
+                  />
+                  <p id="emailErroLogin"></p>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Senha</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="senhaLogin"
+                    name="senhaLogin"
+                    placeholder="Senha"
+                  />
+                  <p id="passErroLogin"></p>
+                  <p id="statusLogin"></p>
+                </div>
+                <div class="mb-3 form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="rememberMe"
+                  />
+                  <label class="form-check-label" for="rememberMe"
+                    >Lembrar-me</label
+                  >
+                </div>
+                <div class="modal-footer d-block">
+                  <p class="float-start">
+                    Sem conta ainda? <a href="#">Registe-se</a>
+                  </p>
+                  <button
+                    class="btn btn-warning float-end"
+                    data-bs-dismiss="modal"
+                  >
+                    Cancelar
+                  </button>
+                  <button
+                    class="btn btn-success float-end"
+                    id="btnSubmitLogin"
+                    onclick="validaLogin()"
+                  >
+                    Submeter
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="articles"
+          class="row row-cols-1 row-cols-md-3 g-4 container-fluid"
+        ></div>
+
+        <div id="desc"></div>
       </div>
-    </nav>
 
-    <br>
-
-    <div id="articles" class="row row-cols-1 row-cols-md-3 g-4 container-fluid">
+      <footer id="footer">© 2021 Copyright</footer>
     </div>
 
+    <!-- Bootstrap JS -->
+    <script src="https://www.markuptag.com/bootstrap/5/js/bootstrap.bundle.min.js"></script>
 
+    <script src="js/users.js"></script>
     <script src="js/ondemand.js"></script>
     <script src="js/onload.js"></script>
   </body>

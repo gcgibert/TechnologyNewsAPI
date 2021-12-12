@@ -9,7 +9,7 @@ app.use(express.urlencoded({extended: true }));
 require("./rotas/rotas")(app);
 
 const PORTA = process.env.PORT || 8080;
-
+    
 app.listen(PORTA, () => {
     console.log(`O servidor está a ouvir na porta ${PORTA}`);
 });

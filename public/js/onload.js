@@ -12,7 +12,55 @@ window.onload = () => {
 
         const urlBase = "http://localhost:8080/api/" + selected;
         const listArticles = document.getElementById("articles");
+        const desc = document.getElementById("desc");
         let texto = "";
+
+        if(selected == "home"){
+            listArticles.innerHTML = "";
+            desc.innerHTML = "";
+      
+            texto += `
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/4gnews.png" class="d-block w-100" height="450px" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="images/noticiasaominuto.png" class="d-block w-100" height="450px" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="images/sapo.png" class="d-block w-100" height="450px" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="images/tugatech.png" class="d-block w-100" height="450px" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+            <div class="card">
+                <div class="card-body" style="text-align: center; font-size:25px; font-family: sans-serif">
+                    Este site tem como objetivo mostrar as noticias sobre tecnologia de diferentes fontes.
+                </div>
+                </div>
+            `
+            
+            ;
+      
+      
+            desc.innerHTML = texto;
+      
+            return;
+        }else{
+          desc.innerHTML = "";
+        }
+
         var myHeaders = new Headers();
 
         var myInit = { method: "GET", headers: myHeaders};
